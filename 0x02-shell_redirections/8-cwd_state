@@ -1,0 +1,18 @@
+total 64
+drwxr-xr-x 3 root root  4096 Jun 27 14:44 .
+drwxr-xr-x 6 root root   161 Jun 27 06:36 ..
+-rwxr--r-- 1 root root    33 Jun 27 08:39 0-hello_world
+-rw-r--r-- 1 root root 12288 Jun 27 06:41 .0-hello_world.swp
+-rwxr--r-- 1 root root    20 Jun 27 14:00 1-confused_smiley
+-rwxr--r-- 1 root root    28 Jun 27 11:04 2-hellofile
+-rwxr--r-- 1 root root    39 Jun 27 13:44 3-twofiles
+-rw-r--r-- 1 root root 12288 Jun 27 11:49 .3-twofiles.swp
+-rwxr--r-- 1 root root    35 Jun 27 13:39 4-lastlines
+-rwxr--r-- 1 root root    35 Jun 27 14:12 5-firstlines
+-rwxr--r-- 1 root root    36 Jun 27 14:17 6-third_line
+-rwxr--r-- 1 root root    24 Jun 27 14:34 7-file
+-rw-r--r-- 1 root root     0 Jun 27 14:45 8-cwd_state
+drwxr-xr-x 6 root root   161 Jun 27 07:58 alx-system_engineering-devops
+-rw-r--r-- 1 root root     0 Jun 27 14:34 \*\\'"Best School"\'\\*$\?\*\*\*\*\*:)
+-rw-r--r-- 1 root root     0 Jun 27 14:45 ls_cwd_content
+-rw-r--r-- 1 root root    55 Jun 27 14:34 README.md
