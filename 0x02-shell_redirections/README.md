@@ -1,1 +1,1 @@
-Abuchi task zero readme
+Write a script that displays a confused smiley
