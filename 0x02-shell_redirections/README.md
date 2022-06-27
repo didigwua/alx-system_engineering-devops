@@ -1,1 +1,1 @@
-i. confused smiley -> Write a script that displays a confused smiley "(Ôo)'
+Display the last 10 lines of /etc/passwd
