@@ -1,2 +1,2 @@
-101-gifs
-find . -name *.gif -type f -printf %fn | rev | cut -d. -f2- | rev | LC_ALL=C sort -f
+#!/bin/bash
+find -type f -name *.gif -printf %fn | rev | cut -d'.' -f 2- | rev | LC_ALL=C sort -f
