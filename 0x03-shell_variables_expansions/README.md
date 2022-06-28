@@ -9,3 +9,4 @@ environment variables -> Create a script that lists environment variables.
 11. There are 10 types of people in the world -> Write a script that converts a number from base 2 to base 10
 12. Combination -> Create a script that prints all possible combinations of two letters, except oo.
 13. Floats -> Write a script that prints a number with two decimal places, followed by a new line
+15. Everyone is a proponent of strong encryption -> Write a script that encodes and decodes text using the rot13 encryption. Assume ASCII.
