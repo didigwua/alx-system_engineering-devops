@@ -1,153 +1,58 @@
-# 0x04. Loops, conditions and parsing
-## General Objectives:
-- How to create SSH keys
-- What is the advantage of using `#!/usr/bin/env bash` over `#!/bin/bash`
-- How to use `while`, `until` and `for` loops
-- How to use `if`, `else`, `elif` and `case` condition statements
-- How to use the `cut` command
-- What are files and other comparison operators, and how to use them
+#Holberton School - 0x04_loops_conditions_and_parsing
+Brief into to loops, conditionals and parsing
 
-## General Requirement
-- Allowed editors: vi, vim, emacs
-- All your files will be interpreted on Ubuntu 20.04 LTS
-- All your files should end with a new line
-- A README.md file, at the root of the folder of the project, is mandatory
-- All your Bash script files must be executable
-- You are not allowed to use awk
-- Your Bash script must pass Shellcheck (version 0.7.0) without any error
-- The first line of all your Bash scripts should be exactly #!/usr/bin/env bash
-- The second line of all your Bash scripts should be a comment explaining
-- what is the script doing
+## New commands / functions used:
+* ``while ((1)); do echo infinity; done``
+* ``for ((i=1; i<10; i++)); do echo $i; done``
+* ``until ((i>10)); do echo $i; done``
+* ``i=$((i+1))`` -- Increment i
+* ``awk '/search_expression/ {some command;}'``
+* ``if [[ -s "my_non_empty_file ]]; then echo It passed!; fi``
+* `` case "$i" in 1) echo one ;; 2) echo two ;; *) echo you get the idea;; esac``
 
-## Tasks
-In this project, I was able to complete the following tasks:
+```
+case "$1" in
+1) echo one
+   ;;
+2) echo two
+  ;;
+*) echo all the rest
+  ;;
+esac
+```
 
-#### 0. Create a SSH RSA key pair
-Share your public key in your answer file [0-RSA_public_key.pub](./0-RSA_public_key.pub)
+## Helpful Links
+* [How For Loops work in Bash](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_01.html)
+* [How While Loops work in Bash](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_02.html)
+* [How Until Loops work in Bash](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_03.html)
+* [Examples of Bash Loops](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-7.html#ss7.1)
+* [Variable Assignment and Arithmetic](http://tldp.org/LDP/abs/html/ops.html)
+* [Comparison Operators](http://tldp.org/LDP/abs/html/comparison-ops.html)
+* [Example Case Statements in Bash](http://www.thegeekstuff.com/2010/07/bash-case-statement/))
+* [Test File Operators](http://tldp.org/LDP/abs/html/fto.html)
+* [Script Portability](https://www.cyberciti.biz/tips/finding-bash-perl-python-portably-using-env.html)
+* [Basic AWK usage](https://www.digitalocean.com/community/tutorials/how-to-use-the-awk-language-to-manipulate-text-in-linux)
 
+## Description of Files
+<h6>0-RSA_public_key.pub</h6>
 
-#### 1. For Best School loop
-Write a Bash script that displays `Best School` 10 times.
+<h6>1-for_holberton_school</h6>
 
-**Requirement:**
+<h6>2-while_holberton_school</h6>
 
-- You must use the `for` loop (`while` and `until` are forbidden)
+<h6>3-until_holberton_school</h6>
 
+<h6>4-if_9_say_hi</h6>
 
-#### 2. While Best School loop
-Write a Bash script that displays `Best School` 10 times.
+<h6>5-4_bad_luck_8_is_your_chance</h6>
 
-**Requirements:**
+<h6>6-superstitious_numbers</h6>
 
-- You must use the `while` loop (`for` and `until` are forbidden)
+<h6>7-clock</h6>
 
+<h6>8-for_ls</h6>
 
-#### 3. Until Best School loop
-Write a Bash script that displays `Best School` 10 times.
+<h6>9-to_file_or_not_to_file</h6>
 
-**Requirements:**
-
-- You must use the `until` loop (`for` and `while` are forbidden)
-
-
-#### 4. If 9, say Hi!
-Write a Bash script that displays `Best School` 10 times, but for the 9th
-iteration, displays `Best School` and then `Hi` on a new line.
-
-**Requirements:**
-
-- You must use the while loop (for and until are forbidden)
-- You must use the if statement
-
-
-#### 5. 4 bad luck, 8 is your chance
-Write a Bash script that loops from 1 to 10 and:
-
-- displays `bad luck` for the 4th loop iteration
-- displays `good luck` for the 8th loop iteration
-- displays `Best School` for the other iterations
-
-**Requirements:**
-
-- You must use the `while` loop (`for` and `until` are forbidden)
-- You must use the `if`, `elif` and `else` statements
-
-
-#### 6. Superstitious numbers
-Write a Bash script that displays numbers from 1 to 20 and:
-
-- displays `4` and then `bad luck from China` for the 4th loop iteration
-- displays `9` and then `bad luck from Japan` for the 9th loop iteration
-- displays `17` and then `bad luck from Italy` for the 17th loop iteration
-
-**Requirements:**
-
-You must use the `while` loop (`for` and `until` are forbidden)
-You must use the `case` statement
-
-
-#### 7. Clock
-Write a Bash script that displays the time for 12 hours and 59 minutes:
-
-- display hours from 0 to 12
-- display minutes from 1 to 59
-
-**Requirements:**
-
-- You must use the `while` loop (`for` and `until` are forbidden)
-
-
-#### 8. For ls
-Write a Bash script that displays:
-
-- The content of the current directory
-- In a list format
-- Where only the part of the name after the first dash is displayed
-
-**Requirements:**
-
-- You must use the for loop (while and until are forbidden)
-- Do not display hidden files
-
-
-#### 9. To file, or not to file
-Write a Bash script that gives you information about the school file.
-
-**Requirements:**
-
-- You must use `if` and, `else` (`case` is forbidden)
-- Your Bash script should check if the file exists and print:
-  - if the file exists: `school file exists`
-  - if the file does not exist: `school file does not exist`
-- If the file exists, print:
-  - if the file is empty: `school file is empty`
-  - if the file is not empty: `school file is not empty`
-  - if the file is a regular file: `school is a regular file`
-  - if the file is not a regular file: (nothing)
-
-
-#### 10. FizzBuzz
-Write a Bash script that displays numbers from 1 to 100.
-
-**Requirements:**
-
-- Displays `FizzBuzz` when the number is a multiple of 3 and 5
-- Displays `Fizz` when the number is multiple of 3
-- Displays `Buzz` when the number is a multiple of 5
-- Otherwise, displays the number
-- In a list format
-
-
-#### 11. Read and cut
-help: `read`
-
-Write a Bash script that displays the content of the file `/etc/passwd`.
-
-Your script should only display:
-
-- username
-- user id
-- Home directory path for the user
-**Requirements:**
-
-- You must use the `while` loop (`for` and `until` are forbidden)
+<h6>10-fizzbuzz</h6>
+Fizz Buzz: Classic coding problem

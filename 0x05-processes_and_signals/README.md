@@ -1,36 +1,51 @@
-# 0x05. Processes and signals
-This project was about `DevOps`, `Shell`, `Bash`, `Syscall` and `Scripting`
+#Holberton School - 0x05-processes_and_signals
+Exercises to manage processes and signals in Bash.
 
-It had 12 mandatory tasks that helped me gain some practical knowledge about
-how to control certain processes in a Linux OS by sending signals
-using bash scripts.
+## New commands / functions used:
+* ``echo $$`` - Prints the PID of the currently running process (Bash)
+* ``ps -aux --forest`` - Prints all the currently running processes from all users in their heirarchy
+* ``pgrep -l bash`` - Prints the PID of all processes matching <pattern>
+* ``:`` - Function that always returns true
+* ``sleep 2`` - The current process waits for 2 seconds
+* ``pkill -f <pattern>`` - Kills all processes whose name contains <pattern>
+* ``trap "echo ITS A TRAP" SIGTERM`` - Traps the signal ^C (interrupt)
+* ``kill -9 <PID>`` - Kills a process immediately with SIGQUIT.
 
-## Tasks
-### 0. What is my PID
-A Bash script that displays its own PID
+## Helpful Links
+* [linfo on PID](http://www.linfo.org/pid.html)
+* [Linux Processes and Environment](http://www.thegeekstuff.com/2012/03/linux-processes-environment/)
+* [Linux Signals Fundamentals](http://www.thegeekstuff.com/2012/03/linux-signals-fundamentals/)
+* [About Signals](http://www.computerhope.com/unix/signals.htm)
+* [Zombie Processes](https://zombieprocess.wordpress.com/what-is-a-zombie-process/)
+* [Putting a process to the background with &](http://bashitout.com/2013/05/18/Ampersands-on-the-command-line.html)
+* [What is /etc/init.d?](http://www.ghacks.net/2009/04/04/get-to-know-linux-the-etcinitd-directory/)
+* [Wikipedia on Daemons](https://en.wikipedia.org/wiki/Daemon_(computing))
+* [Positional Parameters Bash-hackers Wiki](http://wiki.bash-hackers.org/scripting/posparams)
 
-### 1. List your processes
-A Bash script that displays a list of currently running processes.
+## Description of Files
+<h6>0-what-is-my-pid</h6>
 
-### 2. Show your Bash PID
-A Bash script that displays lines containing the `bash` word, thus allowing the user to easily get the PID of the Bash process.
+<h6>1-list_your_processes</h6>
 
-### 3. Show your Bash PID made easy
-A Bash script that displays the PID, along with the process name, of processes whose name contain the word `bash`
+<h6>2-show_your_bash_pid</h6>
 
-### 4. To infinity and beyond
-A Bash script that displays `To infinity and beyond` indefinitely.
+<h6>3-show_your_bash_pid_made_easy</h6>
 
-### 5. Don't stop me now!
-A Bash script that stops [4-to_infinity_and_beyond](./4-to_infinity_and_beyond) process.
+<h6>4-to_infinity_and_beyond</h6>
 
-Requirements:
-- You must use `kill`
+<h6>5-kill_me_now</h6>
 
-### 6. Stop me if you can
-A Bash script that stops [4-to_infinity_and_beyond](./4-to_infinity_and_beyond) process.
+<h6>6-kill_me_now_made_easy</h6>
 
-Requirements:
-- You cannot use `kill` or `killall`
+<h6>7-highlander</h6>
 
-### 7. Highlander
+<h6>8-beheaded_process</h6>
+
+<h6>9-process_and_pid_file</h6>
+
+<h6>10-manage_my_process</h6>
+
+<h6>11-zombie.c</h6>
+
+<h6>12-screencast_unix_signal</h6>
+
