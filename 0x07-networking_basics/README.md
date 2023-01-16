@@ -1,42 +1,38 @@
-#Holberton School - 0x07-networking_basics
-Answer questions based on the OSI Model
+# 0x07. Networking basics #0
 
-## New Commands:
-``ping`` -- sends an ICMP request to a server ``netstat`` -- Displays a list of servers a machine is connected to 
+## Description
+What you should learn from this project:
 
-## Helpful Links
-* [OSI Definition](http://searchnetworking.techtarget.com/definition/OSI)
-* [Lans, Wans and other Area Networks](https://www.lifewire.com/lans-wans-and-other-area-networks-817376)
-* [What is a LAN?](http://searchnetworking.techtarget.com/definition/local-area-network-LAN)
-* [What is a WAN](http://searchenterprisewan.techtarget.com/definition/WAN)
-* [This is the Internet, according to Wikipedia](https://en.wikipedia.org/wiki/Internet)
-* [What is my IP address.com on Mac Address](http://whatismyipaddress.com/mac-address)
-* [The IP address explained](https://www.bleepingcomputer.com/tutorials/ip-addresses-explained/)
-* [Public vs private IP Addresses](https://www.iplocation.net/public-vs-private-ip-address)
-* [Difference between IPv4 and IPv6](http://www.webopedia.com/DidYouKnow/Internet/ipv6_ipv4_difference.html)
-* [Wikipedia: Local Host](https://en.wikipedia.org/wiki/Localhost)
-* [The Difference between TCP and UDP](http://www.howtogeek.com/190014/htg-explains-what-is-the-difference-between-tcp-and-udp/)
-* [List of TCP and UDP Port Numbers](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
-* [Wikipedia: What is the PING utility?](https://en.wikipedia.org/wiki/Ping_(networking_utility))
-* [Scripting with Posparams](http://wiki.bash-hackers.org/scripting/posparams)
-* [
+* What it is
+* How many layers it has
+* How it is organized
 
-## Description of Files
-<h6>0-OSI_model</h6>
-![The Osi Model](osi.png)
-Answers for the OSI Model
+---
 
-<h6>1-types_of_network</h6>
-Answers for task 1
+### [0. OSI model](./0-OSI_model)
+* OSI (Open Systems Interconnection) is an abstract model to describe layered communication and computer network design. The idea is to segregate the different parts of what make communication possible.
 
-<h6>2-MAC_and_IP_address</h6>
-Answers for task 2
 
-<h6>3-UPD_and_TCP</h6>
-Answers for task 3
+### [1. Types of network](./1-types_of_network)
+* 
 
-<h6>4-TCP_and_UDP_ports</h6>
-Answers for task 4
 
-<h6>5-is_the_host_on_the_network</h6>
-Answers for task 5
+### [2. MAC and IP address](./2-MAC_and_IP_address)
+* 
+
+
+### [3. UDP and TCP](./3-UDP_and_TCP)
+* 
+
+
+### [4. TCP and UDP ports](./4-TCP_and_UDP_ports)
+* Once packets have been sent to the right network device using IP using either UDP or TCP as a mode of transportation, it needs to actually enter the network device.
+
+
+### [5. Is the host on the network](./5-is_the_host_on_the_network)
+* 
+
+---
+
+## Author
+* **Geoffrey Zoref** - [Gzoref](https://github.com/Gzoref)

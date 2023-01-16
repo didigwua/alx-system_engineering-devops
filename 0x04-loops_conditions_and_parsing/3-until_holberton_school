@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
-#Prints Holberton School to stdout using an until loop.
-i=10
-until ((i == 0)); do echo Holberton School; i=$((i-1)); done
+#Write a Bash script that displays Holberton School 10 times.
+
+index=10
+
+until [ $index -lt 1 ];
+do
+    echo "Holberton School"
+    let index-=1
+done

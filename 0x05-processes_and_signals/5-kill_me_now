@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-# Kills the script from 4
-kill "$(pgrep "infinity")"
+# Write a Bash script that kills 4-to_infinity_and_beyond process.
+
+PID=$(pgrep -f '4-to_infinity_and_beyond')
+kill "$PID"

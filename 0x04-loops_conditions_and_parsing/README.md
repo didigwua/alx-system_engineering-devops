@@ -1,58 +1,61 @@
-#Holberton School - 0x04_loops_conditions_and_parsing
-Brief into to loops, conditionals and parsing
+# 0x04. Loops, conditions and parsing
 
-## New commands / functions used:
-* ``while ((1)); do echo infinity; done``
-* ``for ((i=1; i<10; i++)); do echo $i; done``
-* ``until ((i>10)); do echo $i; done``
-* ``i=$((i+1))`` -- Increment i
-* ``awk '/search_expression/ {some command;}'``
-* ``if [[ -s "my_non_empty_file ]]; then echo It passed!; fi``
-* `` case "$i" in 1) echo one ;; 2) echo two ;; *) echo you get the idea;; esac``
+## Description
+What you should learn from this project:
 
-```
-case "$1" in
-1) echo one
-   ;;
-2) echo two
-  ;;
-*) echo all the rest
-  ;;
-esac
-```
+* How to create SSH keys
+* What is the advantage of using  #!/usr/bin/env bash over #!/bin/bash
+* How to use while, until and for loops
+* How to use if, else, elif and case condition statements
+* How to use the cut command
+* What are files and other comparison operators, and how to use them
 
-## Helpful Links
-* [How For Loops work in Bash](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_01.html)
-* [How While Loops work in Bash](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_02.html)
-* [How Until Loops work in Bash](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_03.html)
-* [Examples of Bash Loops](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-7.html#ss7.1)
-* [Variable Assignment and Arithmetic](http://tldp.org/LDP/abs/html/ops.html)
-* [Comparison Operators](http://tldp.org/LDP/abs/html/comparison-ops.html)
-* [Example Case Statements in Bash](http://www.thegeekstuff.com/2010/07/bash-case-statement/))
-* [Test File Operators](http://tldp.org/LDP/abs/html/fto.html)
-* [Script Portability](https://www.cyberciti.biz/tips/finding-bash-perl-python-portably-using-env.html)
-* [Basic AWK usage](https://www.digitalocean.com/community/tutorials/how-to-use-the-awk-language-to-manipulate-text-in-linux)
+---
 
-## Description of Files
-<h6>0-RSA_public_key.pub</h6>
+### [0. Create a SSH RSA key pair](./0-RSA_public_key.pub)
+* Read for this task:
 
-<h6>1-for_holberton_school</h6>
 
-<h6>2-while_holberton_school</h6>
+### [1. For Holberton School loop](./1-for_holberton_school)
+* Write a Bash script that displays Holberton School 10 times.
 
-<h6>3-until_holberton_school</h6>
 
-<h6>4-if_9_say_hi</h6>
+### [2. While Holberton School loop](./2-while_holberton_school)
+* Write a Bash script that displays Holberton School 10 times.
 
-<h6>5-4_bad_luck_8_is_your_chance</h6>
 
-<h6>6-superstitious_numbers</h6>
+### [3. Until Holberton School loop](./3-until_holberton_school)
+* Write a Bash script that displays Holberton School 10 times.
 
-<h6>7-clock</h6>
 
-<h6>8-for_ls</h6>
+### [4. If 9, say Hi!](./4-if_9_say_hi)
+* Write a Bash script that displays Holberton School 10 times, but for the 9th iteration, displays Holberton School and then Hi on a new line.
 
-<h6>9-to_file_or_not_to_file</h6>
 
-<h6>10-fizzbuzz</h6>
-Fizz Buzz: Classic coding problem
+### [5. 4 bad luck, 8 is your chance](./5-4_bad_luck_8_is_your_chance)
+* Write a Bash script that loops from 1 to 10 and:
+
+
+### [6. Superstitious numbers](./6-superstitious_numbers)
+* Write a Bash script that displays numbers from 1 to 20 and:
+
+
+### [7. Clock](./7-clock)
+* Write a Bash script that displays the time for 12 hours and 59 minutes:
+
+
+### [8. For ls](./8-for_ls)
+* Write a Bash script that displays:
+
+
+### [9. To file, or not to file](./9-to_file_or_not_to_file)
+* Write a Bash script that gives you information about the holbertonschool file.
+
+
+### [10. FizzBuzz](./10-fizzbuzz)
+* Write a Bash script that displays numbers from 1 to 100.
+
+---
+
+## Author
+* **Geoffrey Zoref** - [Gzoref](https://github.com/Gzoref)

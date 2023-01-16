@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-# displays the contents of the current directory in a list format where only part of the first name after the first dash is displayed
-for FILE in *; do
-	echo "$FILE" | cut -d '-' -f2
+#Write a Bash script that displays...
+
+
+for file in *;
+do
+    echo "$file" | cut -d "-" -f2
 done
