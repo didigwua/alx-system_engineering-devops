@@ -1,39 +1,25 @@
 #!/usr/bin/python3
-'''
-For a given employee ID, returns information about his/her
-TODO list progress in JSON format.
-'''
+"""Export to JSON
+"""
+import json
+import requests
+from sys import argv
 
-if __name__ == '__main__':
-    import json
-    import requests
-    import sys
 
-    NUMBER_OF_DONE_TASKS = 0
-    TASK_TITLE = []
-    USER_ID = sys.argv[1]
-
-    user = requests.get('https://jsonplaceholder.typicode.com/users/{}'.
-                        format(USER_ID))
-    name = user.json()
-    username = name.get('username')
-
-    req = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
-                       format(USER_ID))
-    todos = req.json()
-
-    json_dictionary = {}
-    json_list = []
-
-    for item in todos:
-        json_dictionary['task'] = item.get('title')
-        json_dictionary['completed'] = item.get('completed')
-        json_dictionary['username'] = username
-        json_list.append(json_dictionary)
-        json_dictionary = {}
-
-    json_return = {}
-    json_return[USER_ID] = json_list
-
-    with open(USER_ID + '.json', 'w') as json_file:
-        json.dump(json_return, json_file)
+if __name__ == "__main__":
+    """not executes when import it
+    """
+    url = "https://jsonplaceholder.typicode.com/"
+    USER_ID = argv[1]
+    usereq = requests.get("{}users/{}".format(url, USER_ID)).json()
+    USERNAME = usereq["username"]
+    todoreq = requests.get("{}todos?userId={}".format(url, USER_ID)).json()
+    file_name = "{}.json".format(USER_ID)
+    display = {USER_ID: []}
+    with open(file_name, "w") as jsonfile:
+        for user in todoreq:
+            data = {"task": user.get("title"),
+                    "completed": user.get("completed"),
+                    "username": USERNAME}
+            display.get(USER_ID).append(data)
+        json.dump(display, jsonfile)

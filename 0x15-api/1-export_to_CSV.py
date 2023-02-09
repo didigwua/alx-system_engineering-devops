@@ -1,27 +1,22 @@
 #!/usr/bin/python3
-'''
-For a given employee ID, returns information about his/her
-TODO list progress in CSV format.
-'''
+"""Export data to CSV format"
+"""
+import csv
+import requests
+from sys import argv
 
-if __name__ == '__main__':
-    import csv
-    import requests
-    import sys
 
-    NUMBER_OF_DONE_TASKS = 0
-    TASK_TITLE = []
-    USER_ID = sys.argv[1]
-    user = requests.get('https://jsonplaceholder.typicode.com/users/{}'.
-                        format(USER_ID))
-    name = user.json()
-
-    req = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
-                       format(USER_ID))
-    todos = req.json()
-
-    with open(USER_ID + '.csv', 'w', newline='') as csv_file:
-        write = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
-        for item in todos:
-            write.writerow([name['id'], name['username'],
-                            item['completed'], item['title']])
+if __name__ == "__main__":
+    """not executes when import it
+    """
+    url = "https://jsonplaceholder.typicode.com/"
+    USER_ID = argv[1]
+    usereq = requests.get("{}users/{}".format(url, USER_ID)).json()
+    USERNAME = usereq["username"]
+    todoreq = requests.get("{}todos?userId={}".format(url, USER_ID)).json()
+    file_name = "{}.csv".format(USER_ID)
+    with open(file_name, "w") as csvfile:
+        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+        for user in todoreq:
+            writer.writerow([USER_ID, USERNAME, user.get("completed"),
+                            user.get("title")])
